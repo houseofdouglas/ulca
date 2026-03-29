@@ -1,0 +1,26 @@
+{
+  "name": "s3-sqlite",
+  "version": "0.1.0",
+  "description": "SQLite-on-S3 with atomic reads/writes for single-user-per-database model",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:integration": "INTEGRATION=true vitest run tests/integration"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.750.0",
+    "better-sqlite3": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
